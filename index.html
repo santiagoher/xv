@@ -54,30 +54,44 @@
 </audio>
 
 <!-- MODAL -->
-<div id="welcomeModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+<div id="welcomeModal" 
+     class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
 
-  <div class="relative">
-    
+  <!-- Contenedor -->
+  <div class="relative 
+              w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl
+              max-h-[90vh] flex items-center justify-center">
+
     <!-- X cerrar -->
     <button id="closeWelcome"
-      class="absolute top-4 right-4 bg-white w-10 h-10 rounded-full shadow text-xl">
+      class="absolute top-3 right-3
+             bg-white w-9 h-9 rounded-full shadow text-lg z-20">
       ✕
     </button>
 
-    <!-- Imagen -->
+    <!-- Imagen responsive con límite de altura -->
     <img src="img/Bienvenidos a la invitación de (2).png"
-         class="rounded-2xl h-[85vh] object-contain">
+         class="w-full max-h-[90vh] object-contain rounded-2xl shadow-xl">
 
-    <!-- Botón VER -->
+    <!-- Botón dentro de la imagen -->
     <button id="enterBtn"
-      class="absolute bottom-8 left-1/2 -translate-x-1/2
-             border border-[#bda8c7] px-8 py-3 rounded-full
-             bg-white/80 hover:bg-[#e9deef]">
+      class="absolute bottom-5 left-1/2 -translate-x-1/2
+             border border-[#bda8c7]
+             px-6 sm:px-8
+             py-2
+             text-sm
+             rounded-full
+             bg-white/80 backdrop-blur
+             hover:bg-[#e9deef]
+             transition z-20">
+
       VER INVITACIÓN
+
     </button>
 
   </div>
 </div>
+
 
 <!-- BOTÓN MÚSICA -->
 <button id="musicControl"
