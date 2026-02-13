@@ -227,20 +227,15 @@
                mb-6 sm:mb-10 
                great-vibes-regular-title 
                leading-tight">
-      Con la bendición de Dios,<br>
-      mis padres y padrinos
+      Con la bendición de Dios y mis padres<br>
+      
     </h2>
 
     <!-- Padres -->
-    <h3 class="text-xl sm:text-2xl 
-               morado text-rose-300 
-               mb-3 sm:mb-4 
-               cinzel-title-subtitile">
-      Mis Padres
-    </h3>
+ 
 
     <p class="text-2xl sm:text-3xl 
-              text-gray-700 
+              text-gray-500 
               leading-relaxed 
               cinzel-title-subtitile">
       Katherine Gutiérrez<br>
@@ -344,7 +339,7 @@
 </section>
 
 <!-- RECEPCIÓN - RESPONSIVE -->
-<section class="bg-white py-12 sm:py-16 px-4 text-center">
+<section class="py-12 sm:py-16 px-4 text-center">
 
   <!-- Título -->
   <h2 class="morado text-5xl sm:text-6xl md:text-7xl mb-4 great-vibes-regular-title">
@@ -410,32 +405,35 @@
     Galería de fotos
   </h2>
 
-  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 
+              gap-2 sm:gap-4 grid-flow-dense">
 
-    <!-- Columna izquierda -->
+    <!-- Imagen -->
     <img src="img/princesa.jpeg" 
-         class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md" 
+         class="w-full aspect-square object-cover rounded-lg shadow-md" 
          alt="Princesa">
 
-    <!-- Imagen grande derecha -->
+    <!-- Imagen grande solo en md -->
     <img src="img/image1.jpeg" 
-         class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md
+         class="w-full aspect-square md:aspect-auto
+                object-cover rounded-lg shadow-md
                 md:col-span-2 md:row-span-2" 
          alt="Image 1">
 
     <img src="img/imagen2.jpeg" 
-         class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md" 
+         class="w-full aspect-square object-cover rounded-lg shadow-md" 
          alt="Imagen 2">
 
     <!-- Imagen grande inferior -->
     <img src="img/imagen3.jpeg" 
-         class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md
-                col-span-2 md:col-span-3" 
+         class="w-full aspect-square object-cover rounded-lg shadow-md
+                sm:col-span-2 md:col-span-3" 
          alt="Imagen 3">
 
   </div>
 
 </section>
+
 
 <!-- ITINERARIO - RESPONSIVE -->
 <section class="py-8 sm:py-12 px-4">
