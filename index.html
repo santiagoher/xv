@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Great+Vibes&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    background-color: #faf6ff;
+  }
+
+  .great-vibes-regular-title {
+    font-family: "Great Vibes", cursive;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .cinzel-title {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .cinzel-title-subtitile {
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .morado {
+    color: #d5c4e8;
+  }
+</style>
+
+<body>
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="img/CANCION XV SOFIA.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MODAL -->
+<div id="welcomeModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+
+  <div class="relative">
+    
+    <!-- X cerrar -->
+    <button id="closeWelcome"
+      class="absolute top-4 right-4 bg-white w-10 h-10 rounded-full shadow text-xl">
+      ✕
+    </button>
+
+    <!-- Imagen -->
+    <img src="img/Bienvenidos a la invitación de.png"
+         class="rounded-2xl h-[85vh] object-contain">
+
+    <!-- Botón VER -->
+    <button id="enterBtn"
+      class="absolute bottom-8 left-1/2 -translate-x-1/2
+             border border-[#bda8c7] px-8 py-3 rounded-full
+             bg-white/80 hover:bg-[#e9deef]">
+      VER INVITACIÓN
+    </button>
+
+  </div>
+</div>
+
+<!-- BOTÓN MÚSICA -->
+<button id="musicControl"
+  class="fixed bottom-6 right-6 bg-white w-14 h-14 rounded-full shadow text-xl hidden">
+  🔊
+</button>
+
+</div>
+  <div class="relative">
+    <img src="img/nicol.jpeg" class="w-230 h-350 mx-auto" />
+    <!-- Contenido inferior -->
+    <div class="absolute bottom-0 left-0 w-full flex flex-col items-center py-15 ">
+      <p class="text-white text-9xl font-semibold great-vibes-regular-title">
+        Nikol Sofia
+      </p>
+
+      <p class="text-white text-5xl cinzel-title">
+        MIS 15 AÑOS
+      </p>
+
+      <img src="img/gif.gif" class="w-20 mt-1" />
+    </div>
+  </div>
+
+  <section class="bg-[#d5c4e8] py-6 px-5">
+    <div class="max-w-3xl mx-auto text-center text-white">
+
+      <!-- Comilla superior -->
+      <div class="text-6xl opacity-80 leading-none">
+        &ldquo;
+      </div>
+
+      <!-- Texto -->
+      <p class="text-xl md:text-3xl leading-relaxed font-light cinzel-title">
+        Con mucha alegría te invito a celebrar mis 15 años, un momento muy
+        especial en mi vida que quiero compartir contigo.
+      </p>
+
+      <!-- Comilla inferior -->
+      <div class="text-6xl mt-4 opacity-80 leading-none">
+        &rdquo;
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-gray-100 py-16 px-6 ">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Texto introductorio -->
+      <h2 class="text-3xl md:text-5xl text-rose-300 italic morado mb-10 great-vibes-regular-title">
+        Con la bendición de Dios,<br>
+        mis padres y padrinos
+      </h2>
+
+      <!-- Padres -->
+      <h3 class="text-2xl  morado text-rose-300 mb-4 cinzel-title-subtitile">
+        Mis Padres
+      </h3>
+
+      <p class="text-2xl md:text-3xl text-gray-700 leading-relaxed cinzel-title-subtitile">
+        Katherine Gutiérrez<br>
+        Julio Castañeda
+      </p>
+
+      <!-- Espacio -->
+      <div class="my-10"></div>
+    </div>
+  </section>
+
+  <!-- Google Font elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <section class="bg-[#d5c4e8] py-16 text-center">
+
+    <!-- Título -->
+    <h2 class="text-white text-5xl md:text-6xl mb-12" style="font-family: 'Great Vibes', cursive;">
+      Sábado 21 Marzo
+    </h2>
+
+    <!-- Contador -->
+    <div class="flex justify-center gap-8 flex-wrap">
+
+      <!-- DÍAS -->
+      <div class="flex flex-col items-center">
+        <div id="days" class="w-28 h-28 rounded-full border-4 border-white/70 
+                  flex items-center justify-center 
+                  text-white text-2xl font-light">0</div>
+        <span class="text-white mt-4 tracking-[0.3em] text-sm">DÍAS</span>
+      </div>
+
+      <!-- HORAS -->
+      <div class="flex flex-col items-center">
+        <div id="hours" class="w-28 h-28 rounded-full border-4 border-white/70 
+                  flex items-center justify-center 
+                  text-white text-2xl font-light">0</div>
+        <span class="text-white mt-4 tracking-[0.3em] text-sm">HORAS</span>
+      </div>
+
+      <!-- MINUTOS -->
+      <div class="flex flex-col items-center">
+        <div id="minutes" class="w-28 h-28 rounded-full border-4 border-white/70 
+                  flex items-center justify-center 
+                  text-white text-2xl font-light">0</div>
+        <span class="text-white mt-4 tracking-[0.3em] text-sm">MINS</span>
+      </div>
+
+      <!-- SEGUNDOS -->
+      <div class="flex flex-col items-center">
+        <div id="seconds" class="w-28 h-28 rounded-full border-4 border-white/70 
+                  flex items-center justify-center 
+                  text-white text-2xl font-light">0</div>
+        <span class="text-white mt-4 tracking-[0.3em] text-sm">SECS</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="bg-blank py-16 text-center">
+
+    <!-- Título -->
+    <h2 class="morado text-5xl md:text-6xl mb-5" style="font-family: 'Great Vibes', cursive;">
+      Recepción
+    </h2>
+    <svg class="mx-auto" width="140" height="140" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Corazón -->
+      <path d="M100 28
+            C94 18 78 18 72 28
+            C66 38 72 50 100 64
+            C128 50 134 38 128 28
+            C122 18 106 18 100 28Z" stroke="#B79AC8" stroke-width="3" fill="none" />
+
+      <!-- Pastel superior -->
+      <rect x="60" y="70" width="80" height="30" rx="8" stroke="#B79AC8" stroke-width="3" fill="none" />
+
+      <!-- Línea decorativa -->
+      <line x1="60" y1="85" x2="140" y2="85" stroke="#B79AC8" stroke-width="3" />
+
+      <!-- Pastel inferior -->
+      <rect x="40" y="100" width="120" height="40" rx="10" stroke="#B79AC8" stroke-width="3" fill="none" />
+
+      <!-- Línea decorativa inferior -->
+      <line x1="40" y1="120" x2="160" y2="120" stroke="#B79AC8" stroke-width="3" />
+
+      <!-- Base -->
+      <rect x="25" y="140" width="150" height="10" rx="5" stroke="#B79AC8" stroke-width="3" fill="none" />
+
+      <!-- Soporte -->
+      <rect x="95" y="150" width="10" height="25" stroke="#B79AC8" stroke-width="3" fill="none" />
+
+      <!-- Pie -->
+      <rect x="70" y="175" width="60" height="10" rx="5" stroke="#B79AC8" stroke-width="3" fill="none" />
+
+    </svg>
+    <!-- Hora -->
+    <h3 class="text-4xl md:text-3xl text-gray-600 font-light mb-4 mt-5">
+      7:00 pm
+    </h3>
+
+    <!-- Lugar -->
+    <p class="text-4xl md:text-3xl text-gray-600 font-light mb-4">
+      Salón de eventos Gardenias
+
+    </p>
+
+    <!-- Dirección -->
+    <p class="text-xl md:text-3xl text-gray-600 font-light mb-10">
+      Calle 15 entrando ppr Villa Curry <br>
+      Vereda Barcelona <br>
+      Villavicencio Meta
+    </p>
+
+    <!-- Botón -->
+    <a href="https://www.google.com/maps?q=4.07737398147583,-73.58378601074219&z=17&hl=es" target="_blank" class="inline-block px-10 py-4 rounded-full border 
+              border-[#B79AC8] morado
+              text-lg hover:bg-[#B79AC8] hover:text-white 
+              transition duration-300">
+      Ir a Google Maps
+    </a>
+  </section>
+
+  <section>
+    <img src="img/patron.png" class="w-full h-60 object-cover" alt="patron">
+  </section>
+
+
+
+  <section class="py-10">
+
+    <h2 class="text-center great-vibes-regular-title morado text-6xl italic mb-8">
+      Galería de fotos
+    </h2>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+
+      <!-- Columna izquierda (2 imágenes) -->
+      <img src="img/princesa.jpeg" class="w-full h-full object-cover rounded-lg">
+
+      <!-- Imagen grande derecha -->
+      <img src="img/image1.jpeg" class="w-full h-full object-cover rounded-lg
+             md:col-span-2 md:row-span-2">
+
+      <img src="img/imagen2.jpeg" class="w-full h-full object-cover rounded-lg">
+
+      <!-- Imagen grande inferior -->
+      <img src="img/imagen3.jpeg" class="w-full h-full object-cover rounded-lg
+             col-span-2 md:col-span-3">
+
+    </div>
+
+  </section>
+  <section>
+
+  <h2 class="morado great-vibes-regular-title text-center text-6xl mt-10">Itinerario</h2>
+
+  <img src="img/ENTRADAS.png" class="mx-auto mt-10">
+
+  <h2 class="morado great-vibes-regular-title text-center text-6xl mt-10">Fiesta</h2>
+
+  <h2 class="text-center text-[#6e6e6e] font-serif-elegant text-3xl md:text-4xl mb-14 leading-snug">
+    ¡Hagamos una fiesta única, les dejamos<br>
+    algunos detalles para tener en cuenta!
+  </h2>
+
+  <!-- Cards -->
+  <div class="md:grid-cols-3 gap-8 justify-items-center">
+
+  <div class="border border-[#d9cde0] rounded-2xl p-6 text-center bg-transparent max-w-sm w-full">
+
+    <h3 class="font-serif-elegant text-xl mb-4 tracking-wide morado">VESTUARIO</h3>
+
+    <img src="img/icon.png" alt="icon" class="h-20 w-20 mx-auto">
+
+    <p class="mb-6 text-base text-[#6e6e6e] font-serif-elegant">
+      Conoce las sugerencias del vestuario
+    </p>
+
+    <!-- Botón -->
+    <button id="openModal" class="border border-[#bda8c7] px-5 py-2 rounded-full text-sm hover:bg-[#e9deef] transition">
+      Ver sugerencias
+    </button>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black/50 flex items-center justify-center opacity-0 pointer-events-none transition duration-300">
+
+      <!-- Contenido -->
+      <div id="modalContent" class="relative transform scale-95 transition duration-300">
+        
+        <!-- Botón cerrar -->
+        <button id="closeModal" class="absolute -top-4 -right-4 bg-white rounded-full w-8 h-8 shadow flex items-center justify-center text-lg hover:bg-gray-100">
+          ✕
+        </button>
+
+        <!-- Imagen -->
+        <img src="img/formal (1) (1).png" 
+            class="rounded-2xl max-w-[90vw] max-h-[80vh] object-contain shadow-lg">
+      </div>
+
+    </div>
+
+    <!-- Overlay -->
+    <div id="modal" class="fixed inset-0 bg-black/40 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+
+      <!-- Modal -->
+      <div class="bg-white rounded-2xl shadow-lg w-[90%] max-w-md p-6 relative transform scale-95 transition duration-300" id="modalContent">
+        
+        <!-- Botón cerrar -->
+        <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">
+          ✕
+        </button>
+
+        <h2 class="text-xl font-semibold mb-4">Sugerencias</h2>
+        <p class="text-gray-600">
+          Aquí puedes poner tus sugerencias, texto, formulario o lo que quieras mostrar.
+        </p>
+
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="bg-blank py-16 text-center">
+
+    <!-- Título -->
+    <h2 class="morado text-5xl md:text-6xl mb-5" style="font-family: 'Great Vibes', cursive;">
+      Obsequio
+    </h2>
+   <svg width="100" height="100" class="mx-auto" viewBox="0 0 200 140" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Marco del sobre -->
+  <rect x="20" y="30" width="160" height="80"
+        stroke="#B79AC8"
+        stroke-width="3"
+        fill="none"/>
+
+  <!-- Solapa -->
+  <path d="M20 30
+           L100 80
+           L180 30"
+        stroke="#B79AC8"
+        stroke-width="3"
+        fill="none"/>
+
+</svg>
+    <!-- Hora -->
+    <h3 class="text-4xl md:text-3xl text-gray-600 font-light mb-4 mt-5">
+      lluvia de sobres
+    </h3>
+
+    
+  </section>
+
+<img src="img/bgbg.png" alt="" class="mx-auto">
+<section class="bg-[#d5c4e8] h-[50vh] flex flex-col justify-center items-center text-center text-white px-4">
+
+
+  <!-- Título -->
+  <h2 class=" great-vibes-regular-title text-5xl md:text-7xl mb-6 ">
+    Confirma asistencia
+  </h2>
+
+  <!-- Subtítulo -->
+  <p class="font-elegant text-2xl md:text-4xl leading-relaxed mb-10 cinzel-title">
+    Antes del 06 de agosto del <br class="hidden md:block"> 2026
+  </p>
+
+  <!-- Botón -->
+  <button class="border border-white/60 px-12 py-3 rounded-full text-lg font-elegant hover:bg-white hover:text-[#b7a9c9] transition">
+    Confirmar
+  </button>
+
+  <!-- Footer -->
+  <p class="absolute bottom-10 text-sm tracking-widest opacity-80">
+    CREADO POR INVITARAHORA
+  </p>
+
+</section>
+</body>
+
+
+<script>
+  // 📅 Fecha del evento (21 marzo 2026 - 7:00 AM)
+  const targetDate = new Date("2026-03-21T07:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      document.getElementById("days").innerText = 0;
+      document.getElementById("hours").innerText = 0;
+      document.getElementById("minutes").innerText = 0;
+      document.getElementById("seconds").innerText = 0;
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+
+  const modal = document.getElementById("modal");
+  const modalContent = document.getElementById("modalContent");
+  const openBtn = document.getElementById("openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  openBtn.onclick = () => {
+    modal.classList.remove("opacity-0","pointer-events-none");z
+    modalContent.classList.remove("scale-95");
+  };
+
+  closeBtn.onclick = () => {
+    modal.classList.add("opacity-0","pointer-events-none");
+    modalContent.classList.add("scale-95");
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      modal.classList.add("opacity-0","pointer-events-none");
+      modalContent.classList.add("scale-95");
+    }
+  };
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const welcomeModalEl = document.getElementById("welcomeModal");
+  const enterBtnEl = document.getElementById("enterBtn");
+  const closeBtnEl = document.getElementById("closeWelcome");
+  const bgMusicEl = document.getElementById("bgMusic");
+  const musicControlEl = document.getElementById("musicControl");
+
+  // ABRIR INVITACIÓN + MÚSICA
+  enterBtnEl.addEventListener("click", function(){
+    welcomeModalEl.style.display = "none";
+
+    bgMusicEl.play().catch(()=>{});
+
+    musicControlEl.classList.remove("hidden");
+  });
+
+  // CERRAR SOLO MODAL
+  closeBtnEl.addEventListener("click", function(){
+    welcomeModalEl.style.display = "none";
+  });
+
+  // CONTROL MÚSICA
+  musicControlEl.addEventListener("click", function(){
+    if(bgMusicEl.paused){
+      bgMusicEl.play();
+      musicControlEl.textContent = "🔊";
+    } else {
+      bgMusicEl.pause();
+      musicControlEl.textContent = "🔈";
+    }
+  });
+
+});
+</script>
+
+</html>
